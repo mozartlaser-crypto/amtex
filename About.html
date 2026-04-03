@@ -22,6 +22,42 @@ html, body {
 background: linear-gradient(135deg, #00d4ff 0%, #0099cc 25%, #0066aa 55%, #003d7a 80%, #001f4d 100%);
   background-attachment: fixed;
 }
+	 
+	 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;  /* ← stack everything vertically */
+  align-items: center;
+  justify-content: flex-start;  /* ← don't center vertically */
+}
+
+.hero-card {
+  width: 70%;
+  min-height: 70vh;
+  background: rgba(255, 255, 255, 0.30);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  margin-top: 120px;   /* clears the fixed navbar */
+  margin-bottom: 40px; /* breathing room above footer */
+}
+
+.site-footer {
+  width: 100%;  /* make footer span full width */
+  margin-top: auto; /* pushes footer to bottom */
+}
+	  .hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  height: 100%;
+  color: white;
+}
 	</style>
 <body>
 <header class="site-header" id="siteHeader">
@@ -32,6 +68,7 @@ background: linear-gradient(135deg, #00d4ff 0%, #0099cc 25%, #0066aa 55%, #003d7
         <li><a href="index.html" class="active">Home</a></li>
 		  <li><a href="products.html">Products</a></li>
         <li><a href="About.html">About</a></li>
+		  <li><a href="Contact.html">Contact</a></li>  
       </ul>
     </nav>
     <div class="hamburger"><span></span><span></span><span></span></div>
@@ -39,8 +76,15 @@ background: linear-gradient(135deg, #00d4ff 0%, #0099cc 25%, #0066aa 55%, #003d7
   
 </header>
 
-	<br><br><br> <br><br><br>   
-	  
+   
+	  <section class="hero-card">
+  <div class="hero-inner">
+    <!-- your content here -->
+  <div class="hero-inner">
+    <h1 style="font-size: 48px; font-weight: 300; color: white; margin-bottom: 16px;">About Us</h1>
+    <p style="font-size: 20px; font-weight: 300; color: white; max-width: 600px; line-height: 1.7;">We are a custom boat upholstery company based in California. etc. etc. </p>
+  </div>
+</section>
 	  
 	  <script src="js/navbar.js"></script>
 
